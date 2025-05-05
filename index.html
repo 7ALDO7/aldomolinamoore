@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aldo – Portfolio Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://i.postimg.cc/fW5sGJ66/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="main.js" defer></script>
+</head>
+<body class="dark-theme">
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+      <h1 class="h1 logo"><a href="#home">Aldo<span>.</span></a></h1>
+      <div class="navbar-actions">
+        <select name="language" id="lang">
+          <option value="en">En</option>
+          <option value="es">Es</option>
+        </select>
+        <button class="theme-btn" aria-label="Change Theme" data-theme-btn>
+          <span class="icon"></span>
+        </button>
+      </div>
+      <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+        <span class="one"></span><span class="two"></span><span class="three"></span>
+      </button>
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="#home"     class="navbar-link" data-i18n="nav.home">Home</a></li>
+          <li><a href="#about"    class="navbar-link" data-i18n="nav.about">About</a></li>
+          <li><a href="#skills"   class="navbar-link" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#portfolio"class="navbar-link" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="#contact"  class="navbar-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <article class="container">
+       <!-- HERO SECTION -->
+      <section class="hero" id="home">
+        <figure class="hero-banner">
+          <!-- replaced the <picture> block with your own image -->
+          <img src="assets/images/aldo-profile.png" alt="Aldo Profile" class="w-100">
+        </figure>
+        <div class="hero-content">
+          <h2 class="h2 hero-title" data-i18n="hero.title">Designing &amp; Building Creative Products</h2>
+          <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Contact me</a>
+        </div>
+        <ul class="hero-social-list">
+          <li><a href="#" class="hero-social-link"><i class="ri-facebook-fill"></i><div class="tooltip">Facebook</div></a></li>
+          <li><a href="#" class="hero-social-link"><i class="ri-twitter-x-line"></i><div class="tooltip">Twitter-X</div></a></li>
+          <li><a href="#" class="hero-social-link"><i class="ri-linkedin-fill"></i><div class="tooltip">LinkedIn</div></a></li>
+        </ul>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats" id="stats">
+        <ul class="stats-list">
+          <li>
+            <a href="#" class="stats-card">
+              <div class="card-icon"><img src="https://i.postimg.cc/x1TWtf69/stats-card-icon-1.png" alt="Years Icon"></div>
+              <h2 class="h2 card-title">
+                <span data-i18n="stats.years">15+</span>
+                <strong data-i18n="stats.years_lbl">Years Experience</strong>
+              </h2>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="stats-card">
+              <div class="card-icon"><img src="https://i.postimg.cc/q7ByNYBb/stats-card-icon-2.png" alt="Projects Icon"></div>
+              <h2 class="h2 card-title">
+                <span data-i18n="stats.projects">300+</span>
+                <strong data-i18n="stats.projects_lbl">Projects Delivered</strong>
+              </h2>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="stats-card">
+              <div class="card-icon"><img src="https://i.postimg.cc/hj6d3tL6/stats-card-icon-3.png" alt="Clients Icon"></div>
+              <h2 class="h2 card-title">
+                <span data-i18n="stats.clients">120+</span>
+                <strong data-i18n="stats.clients_lbl">Happy Clients</strong>
+              </h2>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about" id="about">
+        <figure class="about-banner">
+          <img src="assets/images/aldo-profile2.png" alt="About Image" class="w-100">
+        </figure>
+        <div class="about-content section-content">
+          <p class="section-subtitle" data-i18n="about.subtitle">About me</p>
+          <h2 class="h2 section-title" data-i18n="about.title">Hello, I’m Aldo Molina-Moore</h2>
+          <p class="section-text" data-i18n="about.text">
+            I’m a multidisciplinary professional combining web development, data analytics, quality management and leadership. With a Ph.D. in Psychology and 15+ years driving solutions in both public health and tech sectors, I build intuitive web apps, manage complex portfolios and ensure projects exceed expectations.
+          </p>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-secondary" data-i18n="about.hire">Hire me</button>
+          <button class="btn btn-primary" data-i18n="about.cv">Download CV</button>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="skills" id="skills">
+        <div class="skills-content section-content">
+          <p class="section-subtitle" data-i18n="skills.subtitle">My Skills</p>
+          <h2 class="h2 section-title" data-i18n="skills.title">Lo que Ofrezco</h2>
+          <p class="section-text" data-i18n="skills.text">
+            Crafting clean, performant web experiences—front-end & back-end—alongside data & quality management solutions.
+          </p>
+          <div class="skills-toggle" data-toggle-box>
+            <button class="toggle-btn active" data-toggle-btn data-i18n="skills.btn_skills">Skills</button>
+            <button class="toggle-btn" data-toggle-btn data-i18n="skills.btn_tools">Tools</button>
+          </div>
+        </div>
+        <div class="skills-box" data-skills-box>
+          <ul class="skills-list">
+            <li><div class="skills-card"><div class="tooltip">HTML5</div><div class="card-icon"><img src="https://i.postimg.cc/90cYBMc2/html5.png" alt="HTML5"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">CSS3</div><div class="card-icon"><img src="https://i.postimg.cc/cCDwMBD7/css3.png" alt="CSS3"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">JavaScript</div><div class="card-icon"><img src="https://i.postimg.cc/htmQfnq1/javascript.png" alt="JS"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">TypeScript</div><div class="card-icon"><img src="https://i.postimg.cc/HswVg206/typescript.png" alt="TS"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">jQuery</div><div class="card-icon"><img src="https://i.postimg.cc/Y9C14PR2/jquery.png" alt="jQuery"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">Bootstrap</div><div class="card-icon"><img src="https://i.postimg.cc/Fzf3pJw2/bootstrap.png" alt="Bootstrap"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">Angular</div><div class="card-icon"><img src="https://i.postimg.cc/pLMzQrC6/angular.png" alt="Angular"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">React</div><div class="card-icon"><img src="https://i.postimg.cc/LsNPMTpc/react.png" alt="React"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">Vue</div><div class="card-icon"><img src="https://i.postimg.cc/YqYbBJyT/vue.png" alt="Vue"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">Firebase</div><div class="card-icon"><img src="https://i.postimg.cc/vTHbwrGN/firebase.png" alt="Firebase"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">PugJS</div><div class="card-icon"><img src="https://i.postimg.cc/FRKN2brn/pugjs.png" alt="PugJS"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">SASS</div><div class="card-icon"><img src="https://i.postimg.cc/jSrKsYqf/sass.png" alt="SASS"></div></div></li>
+          </ul>
+          <ul class="tools-list">
+            <li><div class="skills-card"><div class="tooltip">Ajax</div><div class="card-icon"><img src="https://i.postimg.cc/FHSDb1Sf/ajax.png" alt="Ajax"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">Gulp</div><div class="card-icon"><img src="https://i.postimg.cc/Xqhkd07c/gulp.png" alt="Gulp"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">Webpack</div><div class="card-icon"><img src="https://i.postimg.cc/NFTk6zy3/webpack.png" alt="Webpack"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">Git</div><div class="card-icon"><img src="https://i.postimg.cc/Gp5FZCv0/git.png" alt="Git"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">npm</div><div class="card-icon"><img src="https://i.postimg.cc/wjxDMvV8/npm.png" alt="npm"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">CLI</div><div class="card-icon"><img src="https://i.postimg.cc/VNrr0b0T/command.png" alt="CLI"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">VS Code</div><div class="card-icon"><img src="https://i.postimg.cc/zvXqW9PB/vs-code.png" alt="VS Code"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">Trello</div><div class="card-icon"><img src="https://i.postimg.cc/FHJNjbGj/trello.png" alt="Trello"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">ClickUp</div><div class="card-icon"><img src="https://i.postimg.cc/wjJYtqT2/clickup.png" alt="ClickUp"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">Slack</div><div class="card-icon"><img src="https://i.postimg.cc/3RfcSVxW/slack.png" alt="Slack"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">Photoshop</div><div class="card-icon"><img src="https://i.postimg.cc/MZ4L1CLF/photoshop.png" alt="Photoshop"></div></div></li>
+            <li><div class="skills-card"><div class="tooltip">Adobe XD</div><div class="card-icon"><img src="https://i.postimg.cc/g0NSjQR4/adobe-xd.png" alt="Adobe XD"></div></div></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section class="project" id="portfolio">
+        <ul class="project-list">
+          <li>
+            <div class="project-content section-content">
+              <p class="section-subtitle" data-i18n="portfolio.subtitle">My Work</p>
+              <h2 class="h3 section-title" data-i18n="portfolio.title">Selected Projects</h2>
+              <p class="section-text" data-i18n="portfolio.text">
+                A showcase of web and data-driven solutions I’ve delivered across industries.
+              </p>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="project-card">
+              <figure class="card-banner"><img src="https://i.postimg.cc/SRGFrbyY/image-plane.jpg" alt="Project 1" width="500"></figure>
+              <div class="card-content">
+                <h3 class="h4 card-title">Below the Plane</h3>
+                <time class="publish-date" datetime="2025-03">March 2025</time>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="project-card">
+              <figure class="card-banner"><img src="https://i.postimg.cc/3r4jFjjr/coffee.jpg" alt="Project 2" width="500"></figure>
+              <div class="card-content">
+                <h3 class="h4 card-title">Pile of Coffee Beans</h3>
+                <time class="publish-date" datetime="2025-03">February 2025</time>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="project-card">
+              <figure class="card-banner"><img src="https://i.postimg.cc/grFpxQzw/desert.jpg" alt="Project 3" width="500"></figure>
+              <div class="card-content">
+                <h3 class="h4 card-title">Weathering Arc</h3>
+                <time class="publish-date" datetime="2025-02">February 2025</time>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="project-card">
+              <figure class="card-banner"><img src="https://i.postimg.cc/s2mpWxFt/article-3.jpg" alt="Project 4" width="500"></figure>
+              <div class="card-content">
+                <h3 class="h4 card-title">Natural Light</h3>
+                <time class="publish-date" datetime="2025-02">February 2025</time>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="project-card">
+              <figure class="card-banner"><img src="https://i.postimg.cc/bJCS8cR7/explore-product-4.jpg" alt="Project 5" width="500"></figure>
+              <div class="card-content">
+                <h3 class="h4 card-title">Mixed Shades</h3>
+                <time class="publish-date" datetime="2025-01">January 2025</time>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="project-card">
+              <figure class="card-banner"><img src="https://i.postimg.cc/PJgBCFgV/img.jpg" alt="Project 6" width="500"></figure>
+              <div class="card-content">
+                <h3 class="h4 card-title">Rugged Mountains</h3>
+                <time class="publish-date" datetime="2025-01">January 2025</time>
+              </div>
+            </a>
+          </li>
+          <li><button class="load-more">Load More Works</button></li>
+        </ul>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <div class="contact-content section-content">
+          <p class="section-subtitle" data-i18n="contact.subtitle">Contact</p>
+          <h2 class="h3 section-title" data-i18n="contact.title">Let’s build something together!</h2>
+          <p class="section-text" data-i18n="contact.text">
+            Reach out for collaborations, freelance or full-time opportunities.
+          </p>
+          <ul class="contact-list">
+            <li class="contact-list-item">
+              <div class="contact-item-icon"><ion-icon name="location-outline"></ion-icon></div>
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title" data-i18n="contact.addr_lbl">Address:</h3>
+                <address class="contact-info">P.O. Box 237, Jarrell TX, 76537, USA</address>
+              </div>
+            </li>
+            <li class="contact-list-item">
+              <div class="contact-item-icon"><ion-icon name="call-outline"></ion-icon></div>
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title" data-i18n="contact.phone_lbl">Phone:</h3>
+                <a href="tel:8334363825" class="contact-info">(833) 436-3825</a>
+                <a href="tel:5129479982" class="contact-info">(512) 947-9982</a>
+              </div>
+            </li>
+            <li class="contact-list-item">
+              <div class="contact-item-icon"><ion-icon name="mail-outline"></ion-icon></div>
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title" data-i18n="contact.email_lbl">Email:</h3>
+                <a href="mailto:aldo@example.com" class="contact-info">aldomolinamoore@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <ul class="contact-social-list">
+                <li><a href="#" class="contact-social-link"><div class="tooltip">Facebook</div><i class="ri-facebook-fill"></i></a></li>
+                <li><a href="#" class="contact-social-link"><div class="tooltip">Twitter-X</div><i class="ri-twitter-x-line"></i></a></li>
+                <li><a href="#" class="contact-social-link"><div class="tooltip">LinkedIn</div><i class="ri-linkedin-fill"></i></a></li>
+                <li><a href="#" class="contact-social-link"><div class="tooltip">YouTube</div><i class="ri-youtube-fill"></i></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <form action="" class="contact-form">
+          <div class="form-wrapper">
+            <label for="name" class="form-label">Name</label>
+            <div class="input-wrapper">
+              <input type="text" id="name" required placeholder="John Doe" class="input-field">
+              <ion-icon name="person-outline"></ion-icon>
+            </div>
+          </div>
+          <div class="form-wrapper">
+            <label for="email" class="form-label">Email</label>
+            <div class="input-wrapper">
+              <input type="email" id="email" required placeholder="john@example.com" class="input-field">
+              <ion-icon name="mail"></ion-icon>
+            </div>
+          </div>
+          <div class="form-wrapper">
+            <label for="phone" class="form-label">Phone</label>
+            <div class="input-wrapper">
+              <input type="tel" id="phone" required placeholder="(512) 123-4567" class="input-field">
+              <ion-icon name="call"></ion-icon>
+            </div>
+          </div>
+          <div class="form-wrapper">
+            <label for="message" class="form-label">Message</label>
+            <div class="input-wrapper">
+              <textarea id="message" required placeholder="Write your Message" class="input-field"></textarea>
+              <ion-icon name="chatbubbles"></ion-icon>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" data-i18n="contact.send">Send</button>
+        </form>
+      </section>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p class="h1 logo"><a href="#home">Aldo<span>.</span></a></p>
+      <p class="copyright">&copy; 2025 Aldo Molina-Moore</p>
+    </div>
+  </footer>
+
+  <a href="#home" class="go-top" data-go-top title="Go to Top">
+    <ion-icon name="arrow-up"></ion-icon>
+  </a>
+</body>
+</html>
