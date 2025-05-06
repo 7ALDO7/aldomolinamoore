@@ -47,10 +47,14 @@
           <!-- replaced the <picture> block with your own image -->
           <img src="assets/images/aldo-profile.png" alt="Aldo Profile" class="w-100">
         </figure>
-        <div class="hero-content">
-          <h2 class="h2 hero-title" data-i18n="hero.title">Designing &amp; Building Creative Products</h2>
-          <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Contact me</a>
-        </div>
+       <div class="hero-content">
+  <h2 class="h2 hero-title">Bridging Psychology, Data &amp; Digital Design</h2>
+  <div class="btn-group">
+    <a href="#about" class="btn btn-secondary">About Me</a>
+    <a href="#portfolio" class="btn btn-primary">Explore My Work</a>
+  </div>
+</div>
+
         <ul class="hero-social-list">
           <li><a href="#" class="hero-social-link"><i class="ri-facebook-fill"></i><div class="tooltip">Facebook</div></a></li>
           <li><a href="#" class="hero-social-link"><i class="ri-twitter-x-line"></i><div class="tooltip">Twitter-X</div></a></li>
@@ -65,7 +69,7 @@
             <a href="#" class="stats-card">
               <div class="card-icon"><img src="https://i.postimg.cc/x1TWtf69/stats-card-icon-1.png" alt="Years Icon"></div>
               <h2 class="h2 card-title">
-                <span data-i18n="stats.years">15+</span>
+                <span data-i18n="stats.years">22+</span>
                 <strong data-i18n="stats.years_lbl">Years Experience</strong>
               </h2>
               <ion-icon name="chevron-forward-outline"></ion-icon>
@@ -94,23 +98,58 @@
         </ul>
       </section>
 
-      <!-- ABOUT -->
-      <section class="about" id="about">
-        <figure class="about-banner">
-          <img src="assets/images/aldo-profile2.png" alt="About Image" class="w-100">
-        </figure>
-        <div class="about-content section-content">
-          <p class="section-subtitle" data-i18n="about.subtitle">About me</p>
-          <h2 class="h2 section-title" data-i18n="about.title">Hello, I’m Aldo Molina-Moore</h2>
-          <p class="section-text" data-i18n="about.text">
-            I’m a multidisciplinary professional combining web development, data analytics, quality management and leadership. With a Ph.D. in Psychology and 15+ years driving solutions in both public health and tech sectors, I build intuitive web apps, manage complex portfolios and ensure projects exceed expectations.
-          </p>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-secondary" data-i18n="about.hire">Hire me</button>
-          <button class="btn btn-primary" data-i18n="about.cv">Download CV</button>
-        </div>
-      </section>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <!-- glowing background lights -->
+  <div class="left-light"></div>
+  <div class="right-light"></div>
+
+  <!-- framed profile -->
+  <div class="guy-image-container">
+    <!-- outer rotated square border -->
+    <div class="background-square-frame"></div>
+    <!-- inner “window” + actual image, clipped and counter-rotated -->
+    <div class="invisible-holder">
+      <div class="square-frame">
+        <img src="assets/images/aldo-profile2.png" alt="Aldo Molina-Moore">
+      </div>
+    </div>
+  </div>
+
+<div class="about-content section-content">
+  <p class="section-subtitle" data-i18n="about.subtitle">About me</p>
+  <h2 class="h2 section-title" data-i18n="about.title">Hello, I’m Dr. Aldo Molina-Moore</h2>
+  <p class="section-text" data-i18n="about.text">
+    I earned my PhD researching the moderating effects of organizational and supervisor support on the relationship between occupational distress and somatic symptoms, and I am currently pursuing a PsyD in Behavioral Health Leadership. For more than 22 years I have combined my passion for learning, clinical insights and technical expertise to design dashboards, build web applications and develop quality-management processes that transform complex data into clear, actionable insights. I also love architecting robust processes, systems and programs that streamline operations and drive continuous improvement. I thrive on identifying evidence-based solutions and applying strategic planning and organizational development principles to achieve meaningful, measurable results.
+  </p>
+</div>
+
+  </div>
+
+  <div class="btn-group">
+    <button
+  type="button"
+  class="btn btn-secondary"
+  onclick="window.open('https://scholarworks.waldenu.edu/dissertations/16298/','_blank')"
+>
+  View Dissertation
+</button>
+ 
+<a
+  href="assets/docs/Aldo_CV.pdf"
+  class="btn btn-primary"
+  download="Aldo_CV.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  data-i18n="about.cv"
+>
+  Download CV
+</a>
+
+
+  </div>
+</section>
+
 
       <!-- SKILLS -->
       <section class="skills" id="skills">
