@@ -301,7 +301,7 @@ main { overflow-x: hidden; }
   margin-bottom: 1px;
 }
 :is(.hero-social-list, .scroll-down) { display: none; }
-.hero-content { max-width: 450px; }
+.hero-content { max-width: 550px; }
 .hero-title { text-align: center; margin-bottom: 3px; }
 .hero .btn-primary { margin-inline: auto; }
 
@@ -343,7 +343,11 @@ main { overflow-x: hidden; }
 .stats-card > ion-icon { color: var(--color-secondary); }
 
 /* About */
-.about { padding-block: var(--section-padding); }
+.about {
+  padding-block-start: calc(var(--section-padding) * 2);
+  padding-block-end: var(--section-padding);
+}
+
 .about-banner {
   max-width: 400px;
   margin-inline: auto;
@@ -354,7 +358,8 @@ main { overflow-x: hidden; }
 
 /* ===== SKILLS / TOOLS TOGGLE ===== */
 .skills {
-  padding-block: var(--section-padding);
+    padding-block-start: calc(var(--section-padding) * 2);
+  padding-block-end: var(--section-padding);
 }
 .skills-content {
   margin-bottom: 50px;
@@ -795,4 +800,195 @@ textarea.input-field {
   display: block;  /* remove inline quirks */
   width: 120%;     /* fill the .about-banner width */
   height: auto;    /* maintain aspect ratio */
+}
+/* FRAME + GLOW ADDITIONS (scaled +50%) */
+.left-light {
+  position: absolute;
+  left: 0;
+  top: -450px;                 /* −300 × 1.5 */
+  width: 465px;                /* 310 × 1.5 */
+  height: 1725px;              /* 1150 × 1.5 */
+  background: linear-gradient(180deg, rgba(84,84,212,.27) 0%, rgba(84,84,212,.11) 100%);
+  transform: rotate(-54deg);
+  border-radius: 233px;        /* 155 × 1.5 */
+  filter: blur(150px);         /* 100 × 1.5 */
+  z-index: -1;
+}
+
+.right-light {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 465px;                /* 310 × 1.5 */
+  height: 1725px;              /* 1150 × 1.5 */
+  background: linear-gradient(180deg, rgba(251,168,28,.11) 0%, rgba(224,86,136,.06) 100%);
+  transform: rotate(65.5deg);
+  border-radius: 233px;        /* 155 × 1.5 */
+  filter: blur(150px);         /* 100 × 1.5 */
+  z-index: -1;
+}
+
+.guy-image-container {
+  width: 555px;                /* 370 × 1.5 */
+  height: 705px;               /* 470 × 1.5 */
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+.background-square-frame {
+  position: absolute;
+  width: 375px;                /* 250 × 1.5 */
+  height: 375px;               /* 250 × 1.5 */
+  border: 2px solid var(--white);
+  border-radius: 15px;
+  transform: rotate(23.5deg);
+  top: 36px;                   /* 24 × 1.5 */
+  left: 78px;                  /* 52 × 1.5 */
+}
+
+.guy-image-container::before {
+  content: "";
+  position: absolute;
+  width: 368px;                /* 245 × 1.5 */
+  height: 368px;               /* 245 × 1.5 */
+  border-radius: 15px;
+  border: 3px solid transparent;
+  border-color: transparent var(--white) var(--white) transparent;
+  transform: rotate(23.5deg);
+  top: 95px;                   /* 63 × 1.5 */
+  left: 104px;                 /* 69 × 1.5 */
+  z-index: 1;
+}
+
+.invisible-holder {
+  position: relative;
+  width: 525px;                /* 350 × 1.5 */
+  height: 596px;               /* 397 × 1.5 */
+  overflow: hidden;
+  transform: rotate(23.5deg);
+}
+
+.square-frame {
+  position: absolute;
+  width: 375px;                /* 250 × 1.5 */
+  height: 375px;               /* 250 × 1.5 */
+  border: 3px solid var(--white);
+  border-radius: 15px;
+  background: linear-gradient(to bottom, #5454d4, #5e5ee7);
+  top: 72px;                   /* 48 × 1.5 */
+  left: 155px;                 /* 103 × 1.5 */
+}
+
+.square-frame img {
+  position: absolute;
+  top: -222px;                 /* -148 × 1.5 */
+  left: -113px;                /* -75 × 1.5 */
+  width: 525px;                /* 350 × 1.5 */
+  height: 650px;               /* 433 × 1.5 */
+  object-fit: contain;
+  transform: rotate(-23.5deg);
+}
+
+/* —— Turn off all rotations —— */
+.background-square-frame,
+.guy-image-container::before,
+.invisible-holder,
+.square-frame,
+.square-frame img {
+  transform: none !important;
+}
+
+/* —— Re-position + size the frames as perfect, axis-aligned squares —— */
+.guy-image-container {
+  /* if you want the container itself to shrink/grow you can tweak these */
+  width: 370px;  
+  height: 470px;
+}
+
+/* the outer white square: */
+.background-square-frame {
+  width: 250px;
+  height: 250px;
+  top: 110px;    /* tweak this to move up/down */
+  left: 60px;    /* tweak this to move left/right */
+}
+
+/* the L-shaped border (was in ::before) — now a full square border */
+.guy-image-container::before {
+  content: "";
+  position: absolute;
+  width: 255px;
+  height: 250px;
+  top: 110px;
+  left: 60px;
+  border: 3px solid var(--white);
+  border-radius: 15px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* the gradient fill + inner border */
+.square-frame {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 110px;
+  left: 100px;
+  background: linear-gradient(to bottom, #5454d4, #5e5ee7);
+  border: 3px solid var(--white);
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+/* your actual image — now just clipped by the square */
+.square-frame img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 260px;
+  object-fit: cover; /* or contain, whichever you prefer */
+}
+/* About section buttons—centered and sitting right below the banner/frame */
+.about {
+  /* make sure children stack vertically on mobile */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about .btn-group {
+  display: inline-flex;     /* shrink‐wrap to the two buttons */
+  gap: 1rem;                /* space between “Hire me” & “Download CV” */
+  margin-top: 2rem;         /* push down beneath whatever you just resized */
+  justify-content: center;  /* center in its flex container */
+}
+
+/* If on desktop you switch .about back to a 2-col grid, keep the buttons centered under the first column: */
+@media (min-width: 992px) {
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+  .about .btn-group {
+    grid-column: 1 / 2;       /* place under the left (image) column */
+    justify-self: center;     /* center under that column */
+    margin-top: -7rem;         /* you can tweak this as needed */
+  }
+}
+
+/* 1. Make all of those rotated frames “invisible” to the mouse */
+.background-square-frame,
+.guy-image-container::before,
+.invisible-holder,
+.square-frame,
+.guy-image-container .shape {
+  pointer-events: none;
+}
+
+/* 2. Bring your buttons above everything else */
+.about .btn-group {
+  position: relative;
+  z-index: 10;
 }
