@@ -17,23 +17,27 @@ const translations = {
     'hero.cta':   'Contact me',
 
     // stats
-    'stats.years':      '15+',
+    'stats.years':      '22+',
     'stats.years_lbl':  'Years Experience',
     'stats.projects':   '300+',
     'stats.projects_lbl':'Projects Delivered',
     'stats.clients':    '120+',
     'stats.clients_lbl':'Happy Clients',
 
-    // about
-    'about.subtitle':'About me',
-    'about.title':   'Hello, I’m Aldo Molina-Moore',
-    'about.text':
-      'I’m a multidisciplinary professional combining web development, data analytics, ' +
-      'quality management and leadership. With a Ph.D. in Psychology and 15+ years driving ' +
-      'solutions in both public health and tech sectors, I build intuitive web apps, manage complex ' +
-      'portfolios and ensure projects exceed expectations.',
-    'about.hire':'Hire me',
-    'about.cv':  'Download CV',
+// in your translations.en block:
+'en': {
+  // … other entries …
+  'about.subtitle': 'About me',
+  'about.title':    'Hello, I’m Aldo Molina-Moore',
+  'about.text':
+    'I earned my PhD researching the moderating effects of organizational and supervisor support on the relationship between occupational distress and somatic symptoms, ' +
+    'and I am currently pursuing a PsyD in Behavioral Health Leadership. For more than 22 years I have combined my passion for learning, clinical insights and technical expertise to design dashboards, build web applications and develop quality-management processes that transform complex data into clear, actionable insights. ' +
+    'I also love architecting robust processes, systems and programs that streamline operations and drive continuous improvement. ' +
+    'I thrive on identifying evidence-based solutions and applying strategic planning and organizational development principles to achieve meaningful, measurable results.',
+  'about.hire': 'Hire me',
+  'about.cv':   'Download CV'
+},
+
 
     // skills section
     'skills.subtitle':'My Skills',
@@ -70,7 +74,7 @@ const translations = {
     'hero.cta':'Contáctame',
 
     // estadísticas
-    'stats.years':'15+',
+    'stats.years':'22+',
     'stats.years_lbl':'Años de Experiencia',
     'stats.projects':'300+',
     'stats.projects_lbl':'Proyectos Entregados',
